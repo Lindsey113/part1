@@ -13,18 +13,26 @@ const App = () => {
     )
   }
 
+  const Part = (props) => {
+    return (
+      <p>
+        {props.part} {props.exercises}
+      </p>
+    )
+  }
+
   const Content = () => {
-    const content = [
-      { part: part1, exercises: exercises1 },
-      { part: part2, exercises: exercises2 },
-      { part: part3, exercises: exercises3 }
-    ]
+    // const content = [
+    //   { part: part1, exercises: exercises1 },
+    //   { part: part2, exercises: exercises2 },
+    //   { part: part3, exercises: exercises3 }
+    // ]
 
     return (
       <div>
-        <p>{content[0].part} {content[0].exercises}</p>
-        <p>{content[1].part} {content[1].exercises}</p>
-        <p>{content[2].part} {content[2].exercises}</p>
+        <Part part={part1} exercises={exercises1} />
+        <Part part={part2} exercises={exercises2} />
+        <Part part={part3} exercises={exercises3} />
       </div>
     )
   }
